@@ -9,11 +9,11 @@
         // definire per entrambe le classi costruttore che accetta tutti gli attributi 
         // definire per entrambe le classi metodo printMe()
         class Author {
-            protected $name;
-            protected $lastanme;
-            public function __construct($name, $lastanme){
+            private $name;
+            private $lastname;
+            public function __construct($name, $lastname){
                 $this-> name = $name;
-                $this-> lastname= $lastanme;
+                $this-> lastname= $lastname;
             }
             public function printMe(){
                 echo "Author:<br>
@@ -23,9 +23,9 @@
             
         }
         class Book{
-            protected $title;
-            protected $price;
-            protected $author1;
+            private $title;
+            private $price;
+            private $author1;
             public function __construct($title, $price, $author1){
                 $this-> title = $title;
                 $this-> price = $price;
