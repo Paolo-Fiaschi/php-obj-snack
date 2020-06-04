@@ -17,30 +17,31 @@
             }
             public function printMe(){
                 echo "Author:<br>
-                name:". $this-> name."<br>"
-                . "lastname:". $this-> lastname. "<br>";
+                name: ". $this-> name."<br>"
+                . "lastname: ". $this-> lastname. "<br>";
             }
             
         }
         class Book{
             private $title;
             private $price;
-            private $author1;
-            public function __construct($title, $price, $author1){
+            private $author;
+            public function __construct($title, $price, $author){
                 $this-> title = $title;
                 $this-> price = $price;
-                $this-> author1 = $author1;
+                $this-> author = $author;
             }
             public function printMe(){
                 
                 echo "Book:<br>
-                title:". $this-> title. "<br>"
-                . "price:". $this-> price. "<br>"
-                . $this-> author1-> printMe();
+                title: ". $this-> title. "<br>"
+                . "price: ". $this-> price. "<br>";
+                $this-> author-> printMe();
             }
         }
 
         $author1 = new Author("Gioia", "Maina");
+        $author2 = new Author("Mario", "Rossi");
         $book1 = new Book("Un giorno in pretura", "30$", $author1);
         $book1-> printMe();
     ?>
